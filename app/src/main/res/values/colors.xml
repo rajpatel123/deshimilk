@@ -15,4 +15,13 @@
     <color name="DarkBlue">#00008B</color>
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
+
+
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorRed">#F50418</color>
+    <color name="colorLightGreen">#C2E996</color>
+    <color name="colorGreen">#467E05</color>
+
+
 </resources>
