@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,16 +7,19 @@
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#DEE0B7"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Gray"
+        android:background="@color/HeaderBackground"
         android:id="@+id/relativelayout1"
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/iv_logodairy"
             android:layout_width="70dp"
             android:layout_height="90dp"
             android:src="@drawable/logodairy"
@@ -26,11 +28,12 @@
             />
 
         <TextView
-            android:id="@+id/tv_delhidairy"
+            android:id="@+id/tv_desimilk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DelhiDairy"
-            android:textSize="20sp"
+            android:text="DesiMilk"
+            android:textSize="25sp"
+            android:textStyle="italic"
             android:textColor="@color/White"
             android:layout_gravity="center"
             android:layout_margin="20dp"
@@ -38,6 +41,7 @@
             />
 
         <SearchView
+            android:id="@+id/sv_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -58,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OUR PRODUCTS"
-            android:textColor="@color/BlueViolet"
+            android:textColor="@color/ProductColor"
             android:textSize="20sp"
             android:gravity="center"
             android:layout_gravity="center"
@@ -68,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enjoy Your Health.Feel Cool, be Cool"
-            android:textColor="@color/YellowGreen"
+            android:textColor="@color/CommentColor"
             android:textSize="20sp"
             android:gravity="center"
             android:layout_gravity="center"
@@ -82,33 +86,38 @@
         android:layout_below="@id/relativelayout2"
         android:layout_margin="10dp"
         >
+
         <ImageView
             android:id="@+id/iv_cowmilk"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="150dp"
-            android:src="@drawable/cowmilk"
             android:layout_alignParentLeft="true"
-            />
+            android:src="@drawable/cowmilk" />
+
         <Button
             android:id="@+id/btn_cowmilk"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="click!! CowMilk"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonround"
             android:layout_below="@id/iv_cowmilk"
             android:gravity="center"
             />
         <ImageView
             android:id="@+id/iv_buffallo"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="150dp"
             android:src="@drawable/bufallo"
             android:layout_alignParentRight="true"
             />
         <Button
             android:id="@+id/btn_buffallo"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="click!! Buffallo"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonround"
             android:layout_below="@id/iv_buffallo"
             android:gravity="center"
             android:layout_alignParentRight="true"
@@ -116,7 +125,7 @@
 
         <ImageView
             android:id="@+id/iv_chhach"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="150dp"
             android:src="@drawable/chhach"
             android:layout_alignParentLeft="true"
@@ -124,60 +133,67 @@
             />
         <Button
             android:id="@+id/btn_chhach"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="click!! Chhach"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonround"
             android:layout_below="@id/iv_chhach"
             android:gravity="center"
             />
 
         <ImageView
-            android:id="@+id/iv_curd"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/curd"
-            android:layout_below="@id/btn_buffallo"
-            android:layout_alignParentRight="true"
-            />
-        <Button
-            android:id="@+id/btn_curd"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="click!! Curd"
-            android:layout_below="@id/iv_curd"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            />
-
-        <ImageView
             android:id="@+id/iv_ghee"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="150dp"
             android:src="@drawable/ghee"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/btn_chhach"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_buffallo"
             />
         <Button
             android:id="@+id/btn_ghee"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="click!! Ghee"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonround"
             android:layout_below="@id/iv_ghee"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/iv_curd"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:src="@drawable/curd"
+            android:layout_below="@id/btn_chhach"
+            android:layout_alignParentLeft="true"
+            />
+        <Button
+            android:id="@+id/btn_curd"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="click!! Curd"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonround"
+            android:layout_below="@id/iv_curd"
             android:gravity="center"
             />
         <ImageView
             android:id="@+id/iv_paneer"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="150dp"
             android:src="@drawable/paneer"
-            android:layout_below="@id/btn_curd"
+            android:layout_below="@id/btn_ghee"
             android:layout_alignParentRight="true"
             />
         <Button
             android:id="@+id/btn_paneer"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="click!! Paneer"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonround"
             android:layout_below="@id/iv_paneer"
             android:gravity="center"
             android:layout_alignParentRight="true"
