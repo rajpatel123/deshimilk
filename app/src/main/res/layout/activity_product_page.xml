@@ -111,6 +111,29 @@
             android:src="@drawable/bufallo"
             android:layout_alignParentRight="true"
             />
+
+
+
+
+
+
+
+        <!--  <ImageView
+            android:id="@+id/iv_buffallo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:src="@drawable/bufallo"
+            android:layout_alignParentRight="true"
+            />-->
+
+
+
+
+
+
+
+
+
         <Button
             android:id="@+id/btn_buffallo"
             android:layout_width="180dp"
