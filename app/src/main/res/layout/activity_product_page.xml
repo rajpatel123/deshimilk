@@ -8,7 +8,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DEE0B7"
+    android:background="@color/BackgroundColor"
     >
 
     <RelativeLayout
@@ -19,19 +19,19 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/iv_logodairy"
+            android:id="@+id/iv_logo"
             android:layout_width="70dp"
             android:layout_height="90dp"
-            android:src="@drawable/logodairy"
+            android:src="@drawable/logo"
             android:layout_marginLeft="10dp"
 
             />
 
         <TextView
-            android:id="@+id/tv_desimilk"
+            android:id="@+id/tv_deshimilk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DesiMilk"
+            android:text="DeshiMilk"
             android:textSize="25sp"
             android:textStyle="italic"
             android:textColor="@color/White"
@@ -111,28 +111,6 @@
             android:src="@drawable/bufallo"
             android:layout_alignParentRight="true"
             />
-
-
-
-
-
-
-
-        <!--  <ImageView
-            android:id="@+id/iv_buffallo"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:src="@drawable/bufallo"
-            android:layout_alignParentRight="true"
-            />-->
-
-
-
-
-
-
-
-
 
         <Button
             android:id="@+id/btn_buffallo"
@@ -225,8 +203,6 @@
 
 
     </RelativeLayout>
-
-
 
 </RelativeLayout>
 </ScrollView>

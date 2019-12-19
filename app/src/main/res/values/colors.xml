@@ -3,6 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="BackgroundColor">#DEE0B7</color>
     <color name="White">#FFFFFF</color>
     <color name="HeaderBackground">#ED26AFF0</color>
     <color name="ProductColor">#860430</color>
@@ -15,4 +16,5 @@
     <color name="DarkBlue">#00008B</color>
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
+    <color name="LightOrange">#E4FCF295</color>
 </resources>

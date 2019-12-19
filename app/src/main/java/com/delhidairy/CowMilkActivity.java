@@ -27,8 +27,9 @@ public class CowMilkActivity extends AppCompatActivity {
         buttonInc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count++;
+
                 txtCount.setText(String.valueOf(count));
+                count++;
 
             }
         });
@@ -36,16 +37,13 @@ public class CowMilkActivity extends AppCompatActivity {
         buttonDec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-if(count<1)
-    System.out.print(count=1);
-                count--;
-                txtCount.setText(String.valueOf(count));
-
+                if(count<=0)
+                    System.out.print(count=1);
+                    count--;
+                    txtCount.setText(String.valueOf(count));
             }
         });
     }
-
 }
 
 
