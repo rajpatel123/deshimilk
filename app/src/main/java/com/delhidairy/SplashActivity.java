@@ -14,8 +14,6 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         new Handler().postDelayed(new Runnable() {
-
-
             @Override
             public void run() {
 
@@ -23,6 +21,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 5000);
+        }, 4000);
     }
 }
