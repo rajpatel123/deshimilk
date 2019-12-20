@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.delhidairy.home.DashBoardActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(SplashActivity.this, ProductPage.class);
+                Intent intent = new Intent(SplashActivity.this, DashBoardActivity.class);
                 startActivity(intent);
                 finish();
             }
