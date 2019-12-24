@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment {
 
         final RecyclerView productlist = (RecyclerView) root.findViewById(R.id.productlist);
         productlist.setLayoutManager(new LinearLayoutManager(getActivity()));
-        String[] product = {"cowmilk", "buffalo", "chhach", "ghee", "paneer", "curd"};
+        String[] product = {"cowmilk", "buffalo", "chhach", "ghee", "paneer", "curd", "cheese"};
         productlist.setAdapter(new DairyAdapter(product));
     }
 }
