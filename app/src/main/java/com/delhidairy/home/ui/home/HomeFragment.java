@@ -13,8 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.delhidairy.CowMilkActivity;
-import com.delhidairy.ProductPage;
+import com.delhidairy.activities.CowMilkActivity;
 import com.delhidairy.R;
 
 public class HomeFragment extends Fragment {
@@ -29,12 +28,6 @@ public class HomeFragment extends Fragment {
         initViews(root);
         return root;
     }
-
-
-
-
-
-
 
     private void initViews(View root) {
         logodairy = root.findViewById(R.id.iv_logo);
