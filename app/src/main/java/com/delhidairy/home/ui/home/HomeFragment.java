@@ -30,12 +30,6 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
-
-
-
-
-
-
     private void initViews(View root) {
         logodairy = root.findViewById(R.id.iv_logo);
         deshimilk = root.findViewById(R.id.tv_deshimilk);
