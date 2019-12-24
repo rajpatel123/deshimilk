@@ -1,18 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/Lightgreen"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome To Delhi Dairy"
+            android:textSize="20sp"
+            android:textColor="#F70636"
+            android:gravity="center"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:layout_width="200sp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            android:layout_marginRight="20sp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please fill the form and pay tocken amount:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:layout_marginLeft="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/tname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:text="Your Name"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Enter your name"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/tmob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fname"
+                android:layout_margin="20sp"
+                android:text="Mobile No"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fmob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tmob"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Enter your mobile no"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/temail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fmob"
+                android:layout_margin="20sp"
+                android:text="Email-id"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/femail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/temail"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Enter your Email-id"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                android:id="@+id/tadd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/femail"
+                android:layout_margin="20sp"
+                android:text="Address"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fadd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tadd"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Enter your Address"
+                android:inputType="text"
+                android:maxLength="500"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fadd"
+                android:layout_margin="20sp"
+                android:text="Pincode"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/fpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tpin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Enter your Pincode"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:maxLength="6"/>
+
+            <TextView
+                android:id="@+id/tquantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fpin"
+                android:layout_margin="20sp"
+                android:text="Quantity:(Liter)"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fquantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tquantity"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Enter Quantity"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:maxLength="9"
+                />
+
+            <TextView
+                android:id="@+id/tque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fquantity"
+                android:layout_margin="20sp"
+                android:text="Any Question:"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fque"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/tque"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2"
+                android:hint="Plz text"
+                android:padding="10dp"
+                android:textSize="20sp"
+
+                />
+
+            <Button
+                android:id="@+id/btn_button1"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/fque"
+                android:layout_centerInParent="true"
+                android:layout_margin="50dp"
+                android:background="@drawable/rectangle1"
+                android:text="Submit and pay"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
