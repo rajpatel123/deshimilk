@@ -1,4 +1,4 @@
-package com.delhidairy;
+package com.delhidairy.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.delhidairy.R;
 import com.delhidairy.home.DashBoardActivity;
 
 public class SplashActivity extends AppCompatActivity {
