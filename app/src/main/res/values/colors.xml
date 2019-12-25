@@ -3,7 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#F8EE99</color>
     <color name="colorAccent">#CEC5C8</color>
-    <color name="White">#38D8EE</color>
+    <color name="White">#fff</color>
     <color name="BackgroundColor">#DEE0B7</color>
     <color name="HeaderBackground">#ED26AFF0</color>
     <color name="ProductColor">#0CA4EB</color>
@@ -17,6 +17,8 @@
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
     <color name="activityBackground">#FFFFFF</color>
-
     <color name="LightOrange">#E4FCF295</color>
+
+    <color name="Lightgreen">#C2E996</color>
+
 </resources>
