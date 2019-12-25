@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/webview"
-        android:name="com.delhidairy.home.ui.aboutus.AboutusFragment"
+        android:name="com.delhidairy.home.ui.aboutus.AboutFragment"
         android:label="aboutus"
         tools:layout="@layout/fragment_aboutus" />
 </navigation>

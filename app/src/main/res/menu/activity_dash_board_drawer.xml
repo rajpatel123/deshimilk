@@ -24,6 +24,12 @@
             android:title="Aboutus" />
 
         <item
+            android:id="@+id/nav_FAQ"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="FAQ" />
+
+
+        <item
             android:id="@+id/nav_Logout"
             android:icon="@drawable/ic_last_page_black_24dp"
             android:title="Logout" />
