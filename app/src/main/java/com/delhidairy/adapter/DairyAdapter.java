@@ -1,5 +1,6 @@
 package com.delhidairy.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.delhidairy.R;
+import com.delhidairy.model.Record;
+import com.delhidairy.utils.Constants;
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingViewholder> {
 
+    Context context;
+    private List<Record> data;
 
-    private String[] data;
-
-    public DairyAdapter(String[] data)
+    public DairyAdapter(List<Record> data, Context context)
     {
         this.data = data;
+        this.context = context;
 
     }
 
@@ -35,19 +42,23 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
 
     @Override
     public void onBindViewHolder(@NonNull ProgrammingViewholder holder, int position) {
-
-        String title = data[position];
-        holder.txtTitle.setText(title);
+        Record records = data.get(position);
+        holder.txtTitle.setText(records.getProductname());
+        Picasso.with(context).load(Constants.BASE_URL+records.getProductimage());
 
 
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return data.size();
     }
 
     public void setTitle(String title) {
+        this.data = data;
+    }
+
+    public void setRecords(List<Record> records) {
         this.data = data;
     }
 

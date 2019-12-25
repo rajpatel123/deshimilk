@@ -1,6 +1,5 @@
 package com.delhidairy.model;
 
-import android.icu.text.AlphabeticIndex;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -10,13 +9,13 @@ public class Readresponse {
 
     @SerializedName("records")
     @Expose
-    private List<AlphabeticIndex.Record> records = null;
+    private List<Record> records = null;
 
-    public List<AlphabeticIndex.Record> getRecords() {
+    public List<Record> getRecords() {
         return records;
     }
 
-    public void setRecords(List<AlphabeticIndex.Record> records) {
+    public void setRecords(List<Record> records) {
         this.records = records;
     }
 
