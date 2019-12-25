@@ -25,8 +25,7 @@
     android:background="@drawable/rectangle1"
     android:layout_gravity="center"
     android:layout_margin="10dp"
-    android:id="@+id/txtTitle"
-
+    android:id="@+id/btnTitle"
     />
 
 </LinearLayout>
