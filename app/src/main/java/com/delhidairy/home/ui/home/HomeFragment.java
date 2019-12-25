@@ -2,6 +2,7 @@ package com.delhidairy.home.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,8 +48,11 @@ public class HomeFragment extends Fragment {
 
         productlist =  root.findViewById(R.id.productlist);
         productlist.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        productlist.setHasFixedSize(true);
         adpter = new DairyAdapter(readresponse.getRecords(), getActivity());
         productlist.setAdapter(adpter);
+
+        Log.d("Init","Success");
     }
 
 
