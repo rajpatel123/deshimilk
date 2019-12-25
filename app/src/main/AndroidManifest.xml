@@ -15,10 +15,9 @@
             android:name=".home.DashBoardActivity"
             android:label="@string/title_activity_dash_board"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ProductPage" />
-        <activity android:name=".HomeActivityPage" />
-        <activity android:name=".CowMilkActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.CowMilkActivity" />
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
