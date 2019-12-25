@@ -1,6 +1,7 @@
 package com.delhidairy.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,8 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.activity_item_list_layout, parent, false);
 
+        Log.d("Init","onCreateViewHolder");
+
         return new ProgrammingViewholder(view);
 
     }
@@ -45,13 +48,21 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
         Record records = data.get(position);
         holder.txtTitle.setText(records.getProductname());
         Picasso.with(context).load(Constants.BASE_URL+records.getProductimage());
+        Log.d("Init","onBindViewHolder");
 
 
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+
+        Log.d("Init","getItemCount");
+
+        if (data!=null){
+            return data.size();
+        }else{
+            return 0;
+        }
     }
 
     public void setTitle(String title) {
@@ -59,7 +70,7 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
     }
 
     public void setRecords(List<Record> records) {
-        this.data = data;
+        this.data = records;
     }
 
     public class ProgrammingViewholder extends RecyclerView.ViewHolder{
