@@ -8,6 +8,8 @@ import android.os.Handler;
 
 import com.delhidairy.R;
 import com.delhidairy.home.DashBoardActivity;
+import com.delhidairy.utils.Constants;
+import com.delhidairy.utils.DairyPrefs;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -20,9 +22,17 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(SplashActivity.this, DashBoardActivity.class);
-                startActivity(intent);
-                finish();
+
+                if (DairyPrefs.getBoolean(SplashActivity.this, Constants.IS_LOGGED_IN)){
+                    Intent intent = new Intent(SplashActivity.this, DashBoardActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
             }
         }, 1000);
     }
