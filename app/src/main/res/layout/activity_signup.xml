@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:orientation="vertical"
+    tools:context=".activities.Activity_Singup">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/Blue"
+        >
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100sp"
+            android:layout_margin="25sp"
+            android:src="@drawable/logo"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="DesiMilk"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40sp"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:text="Signup"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="First Name"
+                android:textSize="28sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/rectangleshape"
+                android:hint="First Name"
+                android:padding="10sp"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="Last Name"
+                android:textSize="28sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/rectangleshape"
+                android:hint="Last Name"
+                android:padding="10sp"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="Email"
+                android:textSize="28sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/rectangleshape"
+                android:hint="Enter Email"
+                android:padding="10sp"
+                android:textSize="28sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="Address"
+                android:textSize="28sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/rectangleshape"
+                android:gravity="left"
+                android:hint="Enter Address"
+                android:padding="20sp"
+                android:textSize="28sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="Mobile"
+                android:textSize="28sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/rectangleshape"
+                android:hint="Enter number"
+                android:inputType="number"
+                android:padding="10sp"
+                android:textSize="28sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="Password"
+                android:textSize="28sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/rectangleshape"
+                android:hint="Enter Password"
+                android:padding="10sp"
+                android:textSize="28sp"
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:background="@drawable/gradient_button"
+                android:text="Submit"
+                android:textSize="25sp"
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                android:id="@+id/btn_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:background="@drawable/gradient_button"
+                android:text="Login"
+                android:textSize="25sp"
+                android:textStyle="bold"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

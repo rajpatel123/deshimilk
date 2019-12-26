@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_color"
-    tools:context=".activities.CowMilkActivity">
+    tools:context=".activities.ProductDescriptionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_gravity="center"
-                android:background="@drawable/background_color"
+                android:background="@color/Lightgreen"
                 android:orientation="horizontal">
 
 
@@ -96,20 +96,10 @@
             android:layout_margin="20dp"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_submit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:background="@drawable/rectangle1"
-                android:text="submit"
-                android:textColor="@color/Black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_submit"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="Product Description"
@@ -120,6 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
+                android:layout_marginTop="20dp"
                 android:text="The milk of cows, goats, or other animals, used as food by humans.
 Any of various potable liquids resembling milk, such as coconut milk or soymilk. A liquid resembling milk in consistency, such as milkweed sap or milk of magnesia."
 
@@ -127,6 +118,7 @@ Any of various potable liquids resembling milk, such as coconut milk or soymilk.
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_enquiry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearayout2"

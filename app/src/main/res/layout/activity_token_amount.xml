@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.Activity_Token_Amount">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/Blue"
+        >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100sp"
+            android:layout_margin="25sp"
+            android:src="@drawable/logo"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="DesiMilk"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Pay Token Amount"
+            android:textSize="45sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For Confirmation"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAY"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_margin="65sp"
+            android:background="@drawable/gradient_button"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
