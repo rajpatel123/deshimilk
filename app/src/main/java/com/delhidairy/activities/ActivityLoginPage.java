@@ -12,12 +12,12 @@ import com.delhidairy.home.DashBoardActivity;
 import com.delhidairy.utils.Constants;
 import com.delhidairy.utils.DairyPrefs;
 
-public class LoginActivity extends AppCompatActivity {
+public class ActivityLoginPage extends AppCompatActivity {
    private Button loginBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login_page);
 
         loginBtn = findViewById(R.id.loginBtn);
 
@@ -25,8 +25,8 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
-                DairyPrefs.putBoolean(LoginActivity.this, Constants.IS_LOGGED_IN,true);
+                Intent intent = new Intent(ActivityLoginPage.this, DashBoardActivity.class);
+                DairyPrefs.putBoolean(ActivityLoginPage.this, Constants.IS_LOGGED_IN,true);
                 startActivity(intent);
                 finish();
 
