@@ -1,5 +1,6 @@
 package com.delhidairy.retrofitcall;
 
+import com.delhidairy.utils.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -36,7 +37,7 @@ public class RetrofitClient {
     private static Retrofit retrofitBuilder() {
         return new Retrofit.Builder()
                 .client(okHttp())
-                .baseUrl("https://primech.000webhostapp.com/")
+                .baseUrl(Constants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson()))
                 .build();
     }
