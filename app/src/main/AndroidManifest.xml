@@ -3,7 +3,7 @@
     package="com.delhidairy">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -12,9 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Signup_Activity"></activity>
-        <activity android:name=".Activity_Login_form" />
-
+        <activity android:name=".activities.LoginActivity"></activity>
         <activity
             android:name=".home.DashBoardActivity"
             android:label="@string/title_activity_dash_board"
@@ -26,7 +24,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
