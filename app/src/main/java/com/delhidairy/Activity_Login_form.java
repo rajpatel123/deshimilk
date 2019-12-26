@@ -22,7 +22,7 @@ public class Activity_Login_form extends AppCompatActivity {
         login_signup = findViewById(R.id.login_signup);
 
         login_signup.setOnClickListener(new View.OnClickListener() {
-            
+
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Activity_Login_form.this,Signup_Activity.class);
