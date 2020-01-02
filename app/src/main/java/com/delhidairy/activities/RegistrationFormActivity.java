@@ -16,13 +16,10 @@ import retrofit2.Response;
 
 public class RegistrationFormActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration_form_activity);
-
 
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("atul@gmail.com");
