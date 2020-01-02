@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.delhidairy.R;
+import com.delhidairy.home.DashBoardActivity;
 
 public class ProductDescriptionActivity extends AppCompatActivity {
 
@@ -59,6 +60,8 @@ public class ProductDescriptionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ProductDescriptionActivity.this, Activity_Token_Amount.class);
                 startActivity(intent);
+                finish();
+
             }
         });
     }

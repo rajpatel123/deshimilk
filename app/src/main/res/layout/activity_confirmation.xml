@@ -11,44 +11,50 @@ tools:context=".activities.Activity_Confirmation">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/Blue"
+    android:background="@color/light_blue"
     >
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="100sp"
-        android:layout_margin="25sp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:src="@drawable/logo"
-        />
+        android:layout_margin="10dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#03A9F4"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="DesiMilk"
+        android:gravity="center"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="40dp"
         />
 </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="20sp"
+    android:layout_margin="20dp"
     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="THANK YOU"
-        android:textSize="55sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/Black"
         android:layout_gravity="center"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="We will Contact you soon..."
-        android:textSize="45sp"
+        android:textSize="35sp"
+        android:layout_marginTop="25dp"
         android:gravity="center"
         android:textStyle="italic"
         />
@@ -58,9 +64,9 @@ tools:context=".activities.Activity_Confirmation">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OK"
-        android:textSize="45sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_margin="55sp"
+        android:layout_margin="55dp"
         android:background="@drawable/gradient_button"
         />
 
