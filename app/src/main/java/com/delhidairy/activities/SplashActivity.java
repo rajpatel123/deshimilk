@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.delhidairy.R;
 import com.delhidairy.home.DashBoardActivity;
 import com.delhidairy.utils.Constants;
 import com.delhidairy.utils.DairyPrefs;
+import com.deshimilk.R;
 
 public class SplashActivity extends AppCompatActivity {
 
