@@ -22,11 +22,10 @@
     android:layout_height="wrap_content"
     android:text="@string/app_name"
     android:gravity="center"
-    android:background="@drawable/rectangle1"
+    android:background="@drawable/rectangleshape"
     android:layout_gravity="center"
     android:layout_margin="10dp"
-    android:id="@+id/txtTitle"
-
+    android:id="@+id/btnTitle"
     />
 
 </LinearLayout>

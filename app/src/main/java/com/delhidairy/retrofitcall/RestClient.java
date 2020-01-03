@@ -6,8 +6,6 @@ import com.delhidairy.model.Readresponse;
 
 import retrofit2.Callback;
 
-import okhttp3.Call;
-
 public class RestClient {
 
     public static void loginUser(LoginRequest loginRequest, Callback<LoginResponse> callback){

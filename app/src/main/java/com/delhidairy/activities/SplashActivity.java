@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.delhidairy.R;
 import com.delhidairy.home.DashBoardActivity;
 import com.delhidairy.utils.Constants;
 import com.delhidairy.utils.DairyPrefs;
-import com.deshimilk.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -28,12 +28,12 @@ public class SplashActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }else{
-                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, ActivityLoginPage.class);
                     startActivity(intent);
                     finish();
                 }
 
             }
-        }, 5000);
+        }, 1000);
     }
 }

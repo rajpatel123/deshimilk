@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.deshimilk">
+    package="com.delhidairy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_app_logo_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerDairyName"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.ActivityLoginPage" />
+        <activity
+            android:name=".home.DashBoardActivity"
+            android:label="@string/title_activity_dash_board"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.Activity_Singup"/>
+        <activity android:name=".activities.Activity_Confirmation"/>
+        <activity android:name=".activities.Activity_Token_Amount"/>
+        <activity android:name=".activities.ProductDescriptionActivity" />
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
