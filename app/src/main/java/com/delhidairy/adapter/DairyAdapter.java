@@ -78,7 +78,7 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
 
     public void setTitle(String title) {
         this.data = data;
-    }
+    } 
 
     public void setRecords(List<Record> records) {
         this.data = records;
