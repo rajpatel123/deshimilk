@@ -1,5 +1,6 @@
 package com.delhidairy.retrofitcall;
 
+import com.delhidairy.model.DairyResponse;
 import com.delhidairy.model.LoginRequest;
 import com.delhidairy.model.LoginResponse;
 import com.delhidairy.model.Readresponse;
@@ -18,6 +19,10 @@ public interface ApiInterface {
 
  @GET ("api/read.php")
  Call<Readresponse>  getAllProduct();
+
+
+ @GET ("api/viewdairy.php")
+ Call<DairyResponse>  getAllDairy();
 
 
 }

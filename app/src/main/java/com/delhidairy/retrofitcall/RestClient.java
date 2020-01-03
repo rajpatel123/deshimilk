@@ -1,5 +1,6 @@
 package com.delhidairy.retrofitcall;
 
+import com.delhidairy.model.DairyResponse;
 import com.delhidairy.model.LoginRequest;
 import com.delhidairy.model.LoginResponse;
 import com.delhidairy.model.Readresponse;
@@ -17,6 +18,10 @@ public class RestClient {
 
     public static void getAllProduct(Callback<Readresponse> callback){
         RetrofitClient.getClient().getAllProduct().enqueue(callback);
+
+    }
+    public static void getAllDairy(Callback<DairyResponse> callback){
+        RetrofitClient.getClient().getAllDairy().enqueue(callback);
 
     }
 
