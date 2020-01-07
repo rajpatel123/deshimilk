@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.delhidairy.R;
@@ -89,6 +88,9 @@ public class ActivityLoginPage extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.body() != null) {
                     String token = response.body().getToken();
+                    response.body().getId();
+
+
 
                     if (TextUtils.isEmpty(token)) {
                         Toast.makeText(ActivityLoginPage.this, "Invalid usename or password", Toast.LENGTH_SHORT).show();

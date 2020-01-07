@@ -2,7 +2,6 @@ package com.delhidairy.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,22 +15,22 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.delhidairy.R;
+import com.delhidairy.activities.DairyAllItemActivity;
 import com.delhidairy.activities.ProductDescriptionActivity;
-import com.delhidairy.model.dairyallitemmodel.Record;
+import com.delhidairy.model.dairyNamemodel.Record;
 import com.delhidairy.utils.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingViewholder> {
+public class DairyNameAdapter extends RecyclerView.Adapter<DairyNameAdapter.ProgrammingViewholder> {
 
     Button btnTitle;
-    private SellingListInterface sellingListInterface;///
 
     Context context;
-    private List<com.delhidairy.model.dairyallitemmodel.Record> data;
+    private List<Record> data;
 
-    public DairyAdapter(List<Record> data, Context context)
+    public DairyNameAdapter(List<Record> data, Context context)
     {
         this.data = data;
         this.context = context;
@@ -43,7 +42,7 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
     public ProgrammingViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.activity_item_list_layout, parent, false);
+        View view = inflater.inflate(R.layout.dairy_name_item, parent, false);
 
         Log.d("Init","onCreateViewHolder");
 
@@ -52,19 +51,18 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ProgrammingViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull ProgrammingViewholder holder, int position) {
         Record records = data.get(position);
-        holder.btnTitle.setText(records.getProductname());
+        holder.btnTitle.setText(records.getDairyname());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (sellingListInterface != null) {                           ///
-                    sellingListInterface.sellinglistitem(holder.getAdapterPosition());   ///
-                }
+                Intent intent= new Intent(context, DairyAllItemActivity.class);
+                context.startActivity(intent);
             }
         });
         Picasso.with(context).load(records.getShopImg()).into(holder.imgIcon);
-        Log.d("Init","onBindViewHolder");
+
 
 
     }
@@ -83,7 +81,7 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
 
     public void setTitle(String title) {
         this.data = data;
-    } 
+    }
 
     public void setRecords(List<Record> records) {
         this.data = records;
@@ -93,29 +91,16 @@ public class DairyAdapter extends RecyclerView.Adapter<DairyAdapter.ProgrammingV
 
         ImageView imgIcon;
         CardView cardView;
-
         TextView btnTitle;
         public ProgrammingViewholder(@NonNull View itemView) {
             super(itemView);
 
-            imgIcon = itemView.findViewById(R.id.imgIcon);
-            cardView = itemView.findViewById(R.id.cardView);
-            btnTitle =  itemView.findViewById(R.id.btnTitle);
+            imgIcon = itemView.findViewById(R.id.imgIcondairy);
+            cardView = itemView.findViewById(R.id.cardviewClick);
+            btnTitle =  itemView.findViewById(R.id.btnTitledairy);
 
         }
     }
-
-    public void setSellingListInterface(SellingListInterface sellingListInterface) {    ///
-        this.sellingListInterface = sellingListInterface;                                 ///
-    }
-
-    public interface SellingListInterface {       ///
-        public void sellinglistitem(int position);
-
-        public void sellinglistitemSeeAll(int position);
-
-    }                                             ///
-
 }
 
 

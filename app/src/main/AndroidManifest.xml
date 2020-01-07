@@ -12,15 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.DairyAllItemActivity"></activity>
         <activity android:name=".activities.ActivityLoginPage" />
         <activity
             android:name=".home.DashBoardActivity"
             android:label="@string/title_activity_dash_board"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.Activity_Singup"/>
-        <activity android:name=".activities.Activity_Confirmation"/>
-        <activity android:name=".activities.Activity_Token_Amount"/>
+        <activity android:name=".activities.Activity_Singup" />
+        <activity android:name=".activities.Activity_Confirmation" />
+        <activity android:name=".activities.Activity_Token_Amount" />
         <activity android:name=".activities.ProductDescriptionActivity" />
+        <activity android:name=".activities.PaymentAddressSaveActivity" />
+        <activity android:name=".activities.AddressForSubscriptionListActivity" />
         <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
