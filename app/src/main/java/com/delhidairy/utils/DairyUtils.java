@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class DairyUtils {
     static ProgressDialog progressBar;
@@ -16,6 +17,10 @@ public class DairyUtils {
         progressBar.setMessage(message);
         progressBar.setCancelable(cancelable);
         progressBar.show();
+    }
+    public static void displayToast(Context applicationContext, String s) {
+        Toast.makeText(applicationContext, s, Toast.LENGTH_LONG).show();
+
     }
 
     public static void dismissDialog(){

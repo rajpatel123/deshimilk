@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.delhidairy.R;
 import com.delhidairy.adapter.DairyAdapter;
+import com.delhidairy.adapter.DairyNameAdapter;
 import com.delhidairy.model.Readresponse;
+import com.delhidairy.model.dairyNamemodel.DairyNameResponse;
 import com.delhidairy.retrofitcall.RestClient;
 import com.delhidairy.utils.DairyUtils;
 
@@ -24,8 +26,8 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
     private RecyclerView productlist;
-    Readresponse readresponse = new Readresponse();
-    private DairyAdapter adpter;
+    DairyNameResponse readresponse = new DairyNameResponse();
+    private DairyNameAdapter adpter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class HomeFragment extends Fragment {
         productlist = root.findViewById(R.id.productlist);
         productlist.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         productlist.setHasFixedSize(true);
-        adpter = new DairyAdapter(readresponse.getRecords(), getActivity());
+        adpter = new DairyNameAdapter(readresponse.getRecords(), getActivity());
         productlist.setAdapter(adpter);
 
         Log.d("Init", "Success");
@@ -54,9 +56,9 @@ public class HomeFragment extends Fragment {
 
         if (DairyUtils.getConnectivityStatus(getActivity())) {
             DairyUtils.showProgress(getActivity(), "Please wait...", false);
-            RestClient.getAllProduct(new Callback<Readresponse>() {
+            RestClient.getDairyname(new Callback<DairyNameResponse>() {
                 @Override
-                public void onResponse(Call<Readresponse> call, Response<Readresponse> response) {
+                public void onResponse(Call<DairyNameResponse> call, Response<DairyNameResponse> response) {
                     DairyUtils.dismissDialog();
 
                     if (response.body() != null) {
@@ -67,7 +69,7 @@ public class HomeFragment extends Fragment {
                 }
 
                 @Override
-                public void onFailure(Call<Readresponse> call, Throwable t) {
+                public void onFailure(Call<DairyNameResponse> call, Throwable t) {
                     DairyUtils.dismissDialog();
                 }
             });
