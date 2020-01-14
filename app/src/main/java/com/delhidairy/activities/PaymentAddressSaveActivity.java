@@ -16,6 +16,8 @@ import com.delhidairy.R;
 import com.delhidairy.model.addaddress.AddAddressRequest;
 import com.delhidairy.model.addaddress.AddAddressResponse;
 import com.delhidairy.retrofitcall.RestClient;
+import com.delhidairy.utils.Constants;
+import com.delhidairy.utils.DairyPrefs;
 import com.delhidairy.utils.DairyUtils;
 import com.delhidairy.utils.Util;
 
@@ -122,7 +124,7 @@ public class PaymentAddressSaveActivity extends AppCompatActivity {
         addAddressRequest.setCity(cityname);
         addAddressRequest.setContactno(phone);
         addAddressRequest.setEmail(emailId);
-        addAddressRequest.setUserid("8");
+        addAddressRequest.setUserid(DairyPrefs.getString(this, Constants.USER_ID));
         addAddressRequest.setFullname(name1);
         addAddressRequest.setLandmark(addressTwo);
 

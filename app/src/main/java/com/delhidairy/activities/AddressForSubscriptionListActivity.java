@@ -24,6 +24,8 @@ import com.delhidairy.model.getAddress.GetAddressRequest;
 import com.delhidairy.model.getAddress.GetAddressResponse;
 import com.delhidairy.model.getAddress.Record;
 import com.delhidairy.retrofitcall.RestClient;
+import com.delhidairy.utils.Constants;
+import com.delhidairy.utils.DairyPrefs;
 import com.delhidairy.utils.DairyUtils;
 import com.delhidairy.utils.Util;
 
@@ -86,7 +88,7 @@ public class AddressForSubscriptionListActivity extends AppCompatActivity {
     private void getAddressData() {
 
         GetAddressRequest getAddressRequest = new GetAddressRequest();
-        getAddressRequest.setUserid(5);
+        getAddressRequest.setUserid(Integer.parseInt(DairyPrefs.getString(AddressForSubscriptionListActivity.this, Constants.USER_ID)));
         Util.showProgressDialog(this);
         RestClient.addnewAddressget(getAddressRequest, new Callback<GetAddressResponse>() {
             @Override

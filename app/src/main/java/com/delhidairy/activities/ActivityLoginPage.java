@@ -88,12 +88,12 @@ public class ActivityLoginPage extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.body() != null) {
                     String token = response.body().getToken();
-                    response.body().getId();
+                    DairyPrefs.putString(ActivityLoginPage.this,Constants.USER_ID, response.body().getId());
 
 
 
                     if (TextUtils.isEmpty(token)) {
-                        Toast.makeText(ActivityLoginPage.this, "Invalid usename or password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityLoginPage.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     Intent intent = new Intent(ActivityLoginPage.this, DashBoardActivity.class);
@@ -102,7 +102,7 @@ public class ActivityLoginPage extends AppCompatActivity {
                     Toast.makeText(ActivityLoginPage.this, "success", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
-                    Toast.makeText(ActivityLoginPage.this, "Invalid usename or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityLoginPage.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
 
                 }
             }
