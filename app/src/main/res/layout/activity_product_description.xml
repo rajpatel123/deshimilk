@@ -7,7 +7,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         tools:context=".activities.ProductDescriptionActivity">
 
         <LinearLayout
@@ -16,14 +15,10 @@
             android:orientation="vertical">
 
             <ImageView
-
                 android:id="@+id/itemimage"
-
-                android:scaleType="centerCrop"
-
                 android:layout_width="match_parent"
-                android:layout_height="250dp"/>
-
+                android:layout_height="250dp"
+                android:scaleType="centerCrop" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -31,23 +26,20 @@
                 android:orientation="vertical"
                 tools:context=".activity.LoginTutorialScreen">
 
-
-
-
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/vpOnboard"
-                    android:visibility="gone"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp" />
+                    android:layout_height="200dp"
+                    android:visibility="gone" />
 
 
                 <com.pixelcan.inkpageindicator.InkPageIndicator
-                    android:visibility="gone"
                     android:id="@+id/indicator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="190dp"
                     android:layout_marginBottom="20dp"
+                    android:visibility="gone"
                     app:ipi_animationDuration="80"
                     app:ipi_currentPageIndicatorColor="@android:color/white"
                     app:ipi_dotDiameter="8dp"
@@ -62,8 +54,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
-
                 android:background="@drawable/background_color"
                 android:orientation="horizontal"
                 android:padding="7dp">
@@ -85,7 +75,6 @@
                     android:id="@+id/btnminus"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-
                     android:background="@drawable/circlebutton"
                     android:text="-"
                     android:textAlignment="center"
@@ -110,7 +99,6 @@
                     android:id="@+id/btnplush"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-
                     android:background="@drawable/circlebutton"
                     android:text="+"
                     android:textAlignment="center"
@@ -124,11 +112,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:textStyle="bold"
-                android:textAllCaps="true"
                 android:text="Product Description"
+                android:textAllCaps="true"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -141,17 +129,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:text="jnasnznzxznxznxzxzxzxxzxzxxx"
                     android:textSize="18sp" />
             </androidx.cardview.widget.CardView>
 
             <RelativeLayout
+                android:id="@+id/relativelayouttext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/relativelayouttext"
                 android:layout_marginLeft="20dp"
-
                 android:layout_marginTop="80dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/logoresourcerectangular"
@@ -163,8 +148,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-
-
                     android:padding="10dp"
                     android:text="Place order"
                     android:textAlignment="center"
@@ -177,15 +160,13 @@
                     android:layout_marginLeft="200dp"
                     android:background="@color/gray" />
 
-
                 <ImageView
                     android:layout_width="55dp"
-
                     android:layout_height="50dp"
                     android:layout_alignParentRight="true"
-
                     android:layout_marginRight="20dp"
-                    android:background="@drawable/ic_arrow_forward_black_24dp"></ImageView>
+                    android:background="@drawable/ic_arrow_forward_black_24dp">
+                </ImageView>
             </RelativeLayout>
 
         </LinearLayout>

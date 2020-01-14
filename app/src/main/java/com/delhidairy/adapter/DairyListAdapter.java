@@ -15,38 +15,16 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.delhidairy.R;
-import com.delhidairy.activities.ProductDescriptionActivity;
-import com.delhidairy.home.DashBoardActivity;
+
 import com.delhidairy.home.ui.dairylist.DairyListActivity;
+
 import com.delhidairy.home.ui.home.HomeFragment;
 import com.delhidairy.model.Record;
 import com.delhidairy.utils.Constants;
 import com.squareup.picasso.Picasso;
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.delhidairy.R;
-import com.delhidairy.activities.ProductDescriptionActivity;
-import com.delhidairy.model.Record;
-import com.delhidairy.utils.Constants;
-import com.squareup.picasso.Picasso;
-
-import java.util.List;
 import java.util.List;
 
 public class DairyListAdapter  extends RecyclerView.Adapter<DairyListAdapter.ProgrammingViewholder> {
-
-
-
 
 
     TextView tvTitle;
@@ -82,7 +60,7 @@ public class DairyListAdapter  extends RecyclerView.Adapter<DairyListAdapter.Pro
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(context, DairyListActivity.class);
+                Intent intent= new Intent(context, HomeFragment.class);
                 context.startActivity(intent);
             }
         });
