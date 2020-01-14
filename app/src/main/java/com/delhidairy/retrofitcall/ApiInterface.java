@@ -9,6 +9,8 @@ import com.delhidairy.model.dairyNamemodel.DairyNameResponse;
 import com.delhidairy.model.dairyallitemmodel.DairyAllItemResponse;
 import com.delhidairy.model.getAddress.GetAddressRequest;
 import com.delhidairy.model.getAddress.GetAddressResponse;
+import com.delhidairy.model.usercreate.Createrequest;
+import com.delhidairy.model.usercreate.Createresponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -37,5 +39,12 @@ public interface ApiInterface {
 
  @POST ("https://primech.000webhostapp.com/api/viewaddress.php")
  Call<GetAddressResponse> getAddress(@Body GetAddressRequest getAddressRequest);
+
+ //create useer
+ @POST ("https://primech.000webhostapp.com/api/create_user.php")
+ Call<Createresponse> getUser(@Body Createrequest addCreaterequest);
+
+
+
 
 }

@@ -9,6 +9,8 @@ import com.delhidairy.model.dairyNamemodel.DairyNameResponse;
 import com.delhidairy.model.dairyallitemmodel.DairyAllItemResponse;
 import com.delhidairy.model.getAddress.GetAddressRequest;
 import com.delhidairy.model.getAddress.GetAddressResponse;
+import com.delhidairy.model.usercreate.Createrequest;
+import com.delhidairy.model.usercreate.Createresponse;
 
 import retrofit2.Callback;
 
@@ -46,6 +48,11 @@ public class RestClient {
         RetrofitClient.getClient().getAddress(getAddressRequest).enqueue(callback);
 
     }
+    public static void createNewuser(Createrequest addCreaterequest,Callback<Createresponse> callback){
+
+        RetrofitClient.getClient().getUser(addCreaterequest).enqueue(callback);
+    }
+
 
 
 }
