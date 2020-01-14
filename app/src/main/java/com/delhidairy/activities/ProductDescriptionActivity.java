@@ -31,13 +31,11 @@ public class ProductDescriptionActivity extends AppCompatActivity {
     ImageView imageViewitem;
     RelativeLayout relativeLayout;
 
-
+   private Button buttonDec, buttonInc;
     int currentPage = 0;
     Timer timer;
     final long DELAY_MS = 2000;//delay in milliseconds before task is to be executed
     final long PERIOD_MS = 3000; // time in milliseconds between successive task executions.
-
-
     private EditText txtCount;
 
     int count = 1;
@@ -48,7 +46,9 @@ public class ProductDescriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_product_description);
 
-        txtCount = (EditText) findViewById(R.id.et_number);
+        buttonDec=  findViewById(R.id.btnminus);
+        buttonInc=  findViewById(R.id.btnplush);
+        txtCount =  findViewById(R.id.et_number);
         textViewDescription = findViewById(R.id.decsription);
         imageViewitem = findViewById(R.id.itemimage);
 
@@ -78,6 +78,27 @@ public class ProductDescriptionActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonInc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                txtCount.setText(String.valueOf(count));
+                count++;
+
+            }
+        });
+        buttonDec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(count<=0)
+                    System.out.print(count=1);
+                count--;
+                txtCount.setText(String.valueOf(count));
+
+            }
+        });
+
 
     }
 
@@ -128,6 +149,10 @@ public class ProductDescriptionActivity extends AppCompatActivity {
 
 
 }
+
+
+
+
 
 
 
