@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -30,6 +31,7 @@ public class ProductDescriptionActivity extends AppCompatActivity {
     TextView textViewDescription;
     ImageView imageViewitem;
     RelativeLayout relativeLayout;
+    EditText et_number;
 
    private Button buttonDec, buttonInc;
     int currentPage = 0;
@@ -39,18 +41,28 @@ public class ProductDescriptionActivity extends AppCompatActivity {
     private EditText txtCount;
 
     int count = 1;
+    Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_product_description);
+        /*setContentView(R.layout.activity_product_description);*/
 
+
+        et_number=findViewById(R.id.et_number);
         buttonDec=  findViewById(R.id.btnminus);
         buttonInc=  findViewById(R.id.btnplush);
         txtCount =  findViewById(R.id.et_number);
         textViewDescription = findViewById(R.id.decsription);
         imageViewitem = findViewById(R.id.itemimage);
+       // toolbar = findViewById(R.id.toolbar);
+
+        /*setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);*/
+
 
         relativeLayout = findViewById(R.id.relativelayouttext);
 
@@ -76,10 +88,15 @@ public class ProductDescriptionActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ProductDescriptionActivity.this,AddressForSubscriptionListActivity.class);
                 startActivity(intent);
+
             }
+
+
         });
 
-        buttonInc.setOnClickListener(new View.OnClickListener() {
+
+
+            buttonInc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -100,6 +117,9 @@ public class ProductDescriptionActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void setSupportActionBar(Toolbar toolbar) {
     }
 
     private void setPagerIndicator() {
